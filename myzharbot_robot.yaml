@@ -1,0 +1,26 @@
+frequency:
+  Odometry: 10
+  PID: {Left: 1, Right: 1}
+  Velocity: 1
+info: {baud_rate: 115200, type_board: Motor Control}
+joint_states:
+  back_emf: {Left: 1.0, Right: 1.0}
+  constraint: {Left: 14000.0, Right: 14000.0}
+  k_ang: {Left: 0.00017453292093705386, Right: 0.00017453292093705386}
+  k_vel: {Left: 27925268.0, Right: 27925268.0}
+  pwm_bit: 4096
+odo_mis_step: 0.0001
+pid:
+  Left: {P: 2, I: 0.02, D: 0.5}
+  Right: {P: 2, I: 0.02, D: 0.5}
+priority:
+  Odometry: 10
+  PID: {Left: 1, Right: 1}
+  Velocity: 1
+process: {'0': PID/Left, '1': PID/Right, '2': Velocity, '3': Odometry, length: 4}
+structure:
+  radius: {Left: 0.0408, Right: 0.0408}
+  wheelbase: 0.138
+tf: {base_link: base_link, joint_states: joint_states, odometry: odometry}
+time: {k_time: 3.051850947599719e-05, step: 32767.0, tm_mill: 1.0}
+timer: {emergency: 1.0, alive: 0.1, rate: 15.0, stop: 2.0}

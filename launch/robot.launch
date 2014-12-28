@@ -1,0 +1,16 @@
+<launch>
+  <param name="robot_description" textfile="$(find myzharbot_robot_ros)/myzharbot_robot.urdf" />
+  
+  <!-- LOAD bridge robot -->
+  <group ns="robot">
+      <rosparam command="load" file="$(find myzharbot_robot_ros)/myzharbot_robot.yaml" />
+      <node name="robot" pkg="serial_bridge" type="serial_bridge_node" args="/dev/ttyUSB0">
+          <remap from = "/robot/joint_states" to = "/joint_states" />
+      </node>
+  </group>
+
+    <group ns="robot_webcam">
+	<node  pkg="usb_cam" name="robot_usb_cam" type="usb_cam_node"/>
+    </group>
+ 
+</launch>
