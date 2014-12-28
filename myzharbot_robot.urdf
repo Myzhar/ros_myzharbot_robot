@@ -1,22 +1,43 @@
 <?xml version="1.0"?>
-<robot name="myfirst">
+<robot name="myzharbot">
     <link name="base_link">
-        <visual>
+	<visual>
             <geometry>
-                <cylinder length="0.2" radius="0.1"/>
+                <cylinder length=".03" radius="0.03"/>
             </geometry>
-            <material name="yellow">
-                <color rgba="1 1 0 0.5"/>
+            <material name="red">
+                <color rgba="1 0 0 0.5"/>
             </material>
         </visual>
     </link>
 
+    <link name="body_link">
+        <visual>
+            <geometry>
+                <box size="0.27 .27 .055"/>
+            </geometry>
+            <material name="black">
+                <color rgba="0.1 0.1 0.1 0.5"/>
+            </material>
+        </visual>
+    </link>
+
+  <joint name="Body" type="continuous">
+    <axis xyz="0 0 1"/>
+    <parent link="base_link"/>
+    <child link="body_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0.09"/>
+    <joint_properties damping="0.0" friction="0.0"/>
+  </joint>
+
   <link name="Left_wheel">
     <visual>
       <geometry>
-        <cylinder length=".01" radius="0.0408"/>
+        <cylinder length=".03" radius="0.034925"/>
       </geometry>
-      <material name="blue"/>
+      <material name="blue">
+      	<color rgba="0 0 1 0.5"/>
+      </material>
     </visual>
   </link>
 
@@ -24,7 +45,7 @@
     <axis xyz="0 0 1"/>
     <parent link="base_link"/>
     <child link="Left_wheel"/>
-    <origin rpy="1.57075 0 0" xyz="0 0.069 -0.085"/>
+    <origin rpy="1.57075 0 0" xyz="0 0.135 0.135"/>
     <limit effort="100" velocity="100"/>
     <joint_properties damping="0.0" friction="0.0"/>
   </joint>
@@ -32,9 +53,11 @@
   <link name="Right_wheel">
     <visual>
       <geometry>
-        <cylinder length=".01" radius="0.0408"/>
+        <cylinder length=".03" radius="0.034925"/>
       </geometry>
-      <material name="blue"/>
+      <material name="blue">
+        <color rgba="0 0 1 0.5"/>
+      </material>
     </visual>
   </link>
 
@@ -42,7 +65,7 @@
     <axis xyz="0 0 1"/>
     <parent link="base_link"/>
     <child link="Right_wheel"/>
-    <origin rpy="1.57075 0 0" xyz="0 -0.069 -0.085"/>
+    <origin rpy="1.57075 0 0" xyz="0 -0.135 0.135"/>
     <limit effort="100" velocity="100"/>
     <joint_properties damping="0.0" friction="0.0"/>
   </joint>
