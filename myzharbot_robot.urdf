@@ -11,7 +11,7 @@
         </visual>
     </link>
 
-    <link name="body_link">
+    <link name="body_chassis_link">
         <visual>
             <geometry>
                 <box size="0.27 .27 .055"/>
@@ -25,8 +25,8 @@
   <joint name="Body" type="continuous">
     <axis xyz="0 0 1"/>
     <parent link="base_link"/>
-    <child link="body_link"/>
-    <origin rpy="0 0 0" xyz="0 0 0.09"/>
+    <child link="body_chassis_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <joint_properties damping="0.0" friction="0.0"/>
   </joint>
 
