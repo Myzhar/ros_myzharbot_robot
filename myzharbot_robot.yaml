@@ -1,4 +1,7 @@
 body_chassis_height: 0.0775
+sprocket_x_offset: 0.135
+sprocket_y_offset: 0.17
+sprocket_z_offset: 0.047625
 frequency:
   Odometry: 10
   PID: {Left: 1, Right: 1}
