@@ -10,9 +10,8 @@ info: {baud_rate: 115200, type_board: Motor Control}
 joint_states:
   back_emf: {Left: 1.0, Right: 1.0}
   constraint: {Left: 32767.0, Right: 32767.0}
-  k_ang: {Left: 0.000214, Right: 0.000214}
-  k_vel: {Left: 34278152.248661, Right: 34278152.248661}
-  pwm_bit: 4096
+  Left: {k_vel: 34278152.248661, k_ang: 0.000214, versus: 1, default_enable: 0}
+  Right: {k_vel: 34278152.248661, k_ang: 0.000214, versus: -1, default_enable: 0}
 odo_mis_step: 0.0001
 pid:
   Left: {P: 2.0, I: 0.2, D: 0.5}
