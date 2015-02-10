@@ -1,7 +1,3 @@
-body_chassis_height: 0.0775
-sprocket_x_offset: 0.135
-sprocket_y_offset: 0.17
-sprocket_z_offset: 0.047625
 frequency:
   Odometry: 10
   PID: {Left: 1, Right: 1}
@@ -9,13 +5,13 @@ frequency:
 info: {baud_rate: 115200, type_board: Motor Control}
 joint_states:
   back_emf: {Left: 1.0, Right: 1.0}
-  constraint: {Left: 32767.0, Right: 32767.0}
+  constraint: {Left: 23000.0, Right: 23000.0}
   Left: {k_vel: 34278152.248661, k_ang: 0.000214, versus: 1, default_enable: 0}
   Right: {k_vel: 34278152.248661, k_ang: 0.000214, versus: -1, default_enable: 0}
 odo_mis_step: 0.0001
 pid:
-  Left: {P: 2.0, I: 0.2, D: 0.5}
-  Right: {P: 2.0, I: 0.2, D: 0.5}
+  Left: {P: 0.05, I: 0.2, D: 0.45}
+  Right: {P: 0.05, I: 0.2, D: 0.45}
 priority:
   Odometry: 10
   PID: {Left: 1, Right: 1}

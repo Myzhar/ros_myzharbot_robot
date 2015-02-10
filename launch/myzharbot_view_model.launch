@@ -1,4 +1,8 @@
 <?xml version="1.0"?>
+
+<!-- This launcher is used to show the Robot Model in Rviz without any TF publisher node active
+     To be used together with "myzharbot_description.launch" -->
+
 <launch>
   <!-- Standalone launcher to visualize the robot model. -->
   <include file="$(find myzharbot_robot_ros)/launch/myzharbot_description.launch"/>

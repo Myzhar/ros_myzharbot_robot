@@ -26,38 +26,54 @@
 
   <!-- base_link -->
   <link name="base_link">
-	<visual>
-	    <origin xyz="0 0 0" rpy="0 0 0" />
-            <geometry>
-                <cylinder length=".01" radius="0.1"/>
-            </geometry>
-            <material name="Red" />
-        </visual>
+    <visual>
+      <geometry>
+        <cylinder length=".01" radius="0.1"/>
+      </geometry>
+      <material name="Red" />
+    </visual>
   </link>
   <!-- base_link -->
 
+  <!-- Body chassis -->
+  <link name="body_chassis_link">
+    <visual>
+      <geometry>
+        <box size="0.27 0.27 .055"/>
+      </geometry>
+      <material name="Black" />
+    </visual>
+  </link>
+  <joint name="Body" type="fixed">
+    <axis xyz="0 0 1"/>
+    <parent link="base_link"/>
+    <child link="body_chassis_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0.0775"/>
+    <joint_properties damping="0.0" friction="0.0"/>
+  </joint>  
+  <!-- Body chassis -->  
+
   <!-- Active Sprockets -->
   <xacro:myzharbot_active_sprocket position="Left">
-    <origin xyz="${active_sprocket_offset_x} ${-active_sprocket_offset_y} ${active_sprocket_offset_z}" rpy="${M_PI/2} 0 0" />
+    <origin xyz="${active_sprocket_offset_x} ${active_sprocket_offset_y} ${active_sprocket_offset_z}" rpy="${-M_PI/2} 0 0" />
   </xacro:myzharbot_active_sprocket>
   <xacro:myzharbot_active_sprocket position="Right">
-    <origin xyz="${active_sprocket_offset_x} ${active_sprocket_offset_y} ${active_sprocket_offset_z}" rpy="${M_PI/2} 0 ${M_PI}" />
+    <origin xyz="${active_sprocket_offset_x} ${-active_sprocket_offset_y} ${active_sprocket_offset_z}" rpy="${-M_PI/2} 0 0" />
   </xacro:myzharbot_active_sprocket>
   <!-- Active Sprockets -->  
-  
-  
+    
   <!-- Passive Sprockets -->
   <xacro:myzharbot_passive_sprocket sprocket_suffix="bfl" position="Left">
-    <origin xyz="${passive_sprocket_offset_x} ${-passive_sprocket_offset_y} ${passive_sprocket_offset_z}" rpy="${M_PI/2} 0 0" />
+    <origin xyz="${passive_sprocket_offset_x} ${passive_sprocket_offset_y} ${passive_sprocket_offset_z}" rpy="${-M_PI/2} 0 0" />
   </xacro:myzharbot_passive_sprocket>
   <xacro:myzharbot_passive_sprocket sprocket_suffix="brl" position="Left">
-    <origin xyz="${-passive_sprocket_offset_x} ${-passive_sprocket_offset_y} ${passive_sprocket_offset_z}" rpy="${M_PI/2} 0 0" />
+    <origin xyz="${-passive_sprocket_offset_x} ${passive_sprocket_offset_y} ${passive_sprocket_offset_z}" rpy="${-M_PI/2} 0 0" />
   </xacro:myzharbot_passive_sprocket>
   <xacro:myzharbot_passive_sprocket sprocket_suffix="bfr" position="Right">
-    <origin xyz="${passive_sprocket_offset_x} ${passive_sprocket_offset_y} ${passive_sprocket_offset_z}" rpy="${M_PI/2} 0 ${M_PI}" />
+    <origin xyz="${passive_sprocket_offset_x} ${-passive_sprocket_offset_y} ${passive_sprocket_offset_z}" rpy="${-M_PI/2} 0 0" />
   </xacro:myzharbot_passive_sprocket>
   <xacro:myzharbot_passive_sprocket sprocket_suffix="brr" position="Right">
-    <origin xyz="${-passive_sprocket_offset_x} ${passive_sprocket_offset_y} ${passive_sprocket_offset_z}" rpy="${M_PI/2} 0 ${M_PI}" />
+    <origin xyz="${-passive_sprocket_offset_x} ${-passive_sprocket_offset_y} ${passive_sprocket_offset_z}" rpy="${-M_PI/2} 0 0" />
   </xacro:myzharbot_passive_sprocket>
   <!-- Passive Sprockets -->
     

@@ -12,7 +12,7 @@
       </visual>
     </link>
   
-    <joint name="Sprocket_${sprocket_suffix}" type="continuous">
+    <joint name="Sprocket_${sprocket_suffix}" type="fixed">
       <parent link="base_link"/>
       <child link="spr_${sprocket_suffix}"/>
       <limit effort="100" velocity="100"/>
@@ -23,7 +23,7 @@
     
     <transmission name="sprocket_trans_${sprocket_suffix}" type="SimpleTransmission">
        <type>transmission_interface/SimpleTransmission</type>
-       <actuator name="${position}_wheel">			
+       <actuator name="${position}">			
           <mechanicalReduction>${active_sprocket_radius/passive_sprocket_radius}</mechanicalReduction>
        </actuator>
        <joint name="Sprocket_${sprocket_suffix}">
