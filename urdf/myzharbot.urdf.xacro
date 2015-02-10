@@ -1,7 +1,34 @@
+<?xml version="1.0"?>
 <robot name="myzharbot_robot" xmlns:xacro="http://ros.org/wiki/xacro">
 
   <xacro:include filename="$(find myzharbot_description)/urdf/tracks.urdf.xacro" />
 
   <property name="M_PI" value="3.14159"/>
+  <!-- Sprockets params -->
+  <property name="active_sprocket_radius" value="0.034925"/>
+  <property name="passive_sprocket_radius" value="0.047625"/>
+  <property name="active_sprocket_leght" value="0.034925"/>
+  <property name="passive_sprocket_leght" value="0.047625"/>
+  <property name="sprocket_offset_x" value="0.135"/>
+  <property name="sprocket_offset_y" value="0.170"/>
+  <property name="sprocket_offset_z" value="0.047625"/>
+  <!-- Sprockets params -->
+  
+  
+  <!-- Passive Sprockets -->
+  <xacro:myzharbot_passive_sprocket sprocket_suffix="bfl" position="Left">
+    <origin xyz="${sprocket_offset_x} ${sprocket_offset_y} ${wheel_vertical_offset}" rpy="0 0 0" />
+  </xacro:myzharbot_passive_sprocket>
+  <xacro:myzharbot_passive_sprocket sprocket_suffix="brl" position="Left">
+    <origin xyz="${sprocket_offset_x} -${sprocket_offset_y} ${sprocket_offset_z}" rpy="0 0 0" />
+  </xacro:myzharbot_passive_sprocket>
+  <xacro:myzharbot_passive_sprocket sprocket_suffix="bfr" position="Right">
+    <origin xyz="-${sprocket_offset_x} ${sprocket_offset_y} ${sprocket_offset_z}" rpy="0 0 0" />
+  </xacro:myzharbot_passive_sprocket>
+  <xacro:myzharbot_passive_sprocket sprocket_suffix="brr" position="Right">
+    <origin xyz="-${sprocket_offset_x} -${sprocket_offset_y} ${sprocket_offset_z}" rpy="0 0 0" />
+  </xacro:myzharbot_passive_sprocket>
+  <!-- Passive Sprockets -->
+    
 
 </robot>
