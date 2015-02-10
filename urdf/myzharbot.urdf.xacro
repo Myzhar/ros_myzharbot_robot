@@ -1,10 +1,15 @@
 <?xml version="1.0"?>
 <robot name="myzharbot_robot" xmlns:xacro="http://ros.org/wiki/xacro">
 
+  <!-- Included URDF/XACRO Files -->
+  <xacro:include filename="$(find myzharbot_robot_ros)/urdf/materials.urdf" />
   <xacro:include filename="$(find myzharbot_robot_ros)/urdf/passive_sprocket.urdf.xacro" />
   <xacro:include filename="$(find myzharbot_robot_ros)/urdf/active_sprocket.urdf.xacro" />
+  <!-- Included URDF/XACRO Files -->
 
+  <!-- Global properties -->
   <property name="M_PI" value="3.14159"/>
+  <!-- Global properties -->
   
   <!-- Sprockets params -->
   <property name="active_sprocket_radius" value="0.034925"/>
