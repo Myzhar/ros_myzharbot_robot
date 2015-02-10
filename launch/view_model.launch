@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Standalone launcher to visualize the robot model. -->
+  <include file="$(find myzharbot_robot_ros)/launch/myzharbot_description.launch"/>
+  
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="true" />
+  </node>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find myzharbot_robot_ros)/rviz/model.rviz" />
+</launch>
