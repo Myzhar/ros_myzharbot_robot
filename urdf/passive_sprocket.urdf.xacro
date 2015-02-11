@@ -21,16 +21,16 @@
       <axis xyz="0 0 1" rpy="0 0 0"/>      
     </joint>
     
-    <transmission name="sprocket_trans_${sprocket_suffix}" type="SimpleTransmission">
-       <type>transmission_interface/SimpleTransmission</type>
-       <actuator name="${position}">			
-          <mechanicalReduction>${active_sprocket_radius/passive_sprocket_radius}</mechanicalReduction>
-       </actuator>
-       <joint name="Sprocket_${sprocket_suffix}">
-          <hardwareInterface>VelocityJointInterface</hardwareInterface>
-       </joint>
-    </transmission>
-  
+    <transmission name="sprocket_trans_${sprocket_suffix}">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="Sprocket_${sprocket_suffix}">
+      		<hardwareInterface>EffortJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="${position}">
+		<hardwareInterface>EffortJointInterface</hardwareInterface>
+      			<mechanicalReduction>${active_sprocket_radius/passive_sprocket_radius}</mechanicalReduction>
+        </actuator>
+    </transmission>  
   </xacro:macro>
 
 </robot>
