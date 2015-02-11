@@ -5,6 +5,7 @@
   <xacro:include filename="$(find myzharbot_robot_ros)/urdf/materials.urdf" />
   <xacro:include filename="$(find myzharbot_robot_ros)/urdf/passive_sprocket.urdf.xacro" />
   <xacro:include filename="$(find myzharbot_robot_ros)/urdf/active_sprocket.urdf.xacro" />
+  <xacro:include filename="$(find myzharbot_robot_ros)/urdf/sensors/asus_xtion_pro.urdf.xacro"/>
   <!-- Included URDF/XACRO Files -->
 
   <!-- Global properties -->
@@ -51,7 +52,17 @@
     <origin rpy="0 0 0" xyz="0 0 0.0775"/>
     <joint_properties damping="0.0" friction="0.0"/>
   </joint>  
-  <!-- Body chassis -->  
+  <!-- Body chassis --> 
+
+  <!-- Asus Xtion Pro Live --> 
+  <property name="cam_px" value="-0.085" />
+  <property name="cam_py" value="-0.022" />
+  <property name="cam_pz" value="0.18" />
+  <property name="cam_or" value="0" />
+  <property name="cam_op" value="0" />
+  <property name="cam_oy" value="${M_PI}" />
+  <xacro:sensor_asus_xtion_pro parent="base_link"/>
+  <!-- Asus Xtion Pro Live --> 
 
   <!-- Active Sprockets -->
   <xacro:myzharbot_active_sprocket position="Left">
@@ -76,6 +87,6 @@
     <origin xyz="${-passive_sprocket_offset_x} ${-passive_sprocket_offset_y} ${passive_sprocket_offset_z}" rpy="${-M_PI/2} 0 0" />
   </xacro:myzharbot_passive_sprocket>
   <!-- Passive Sprockets -->
-    
+  
 
 </robot>

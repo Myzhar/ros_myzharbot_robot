@@ -78,6 +78,32 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        body_chassis_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_depth_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        camera_depth_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_rgb_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        camera_rgb_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         spr_bfl:
           Alpha: 1
           Show Axes: false
@@ -115,6 +141,18 @@ Visualization Manager:
           Value: true
         base_link:
           Value: true
+        body_chassis_link:
+          Value: true
+        camera_depth_frame:
+          Value: true
+        camera_depth_optical_frame:
+          Value: true
+        camera_link:
+          Value: true
+        camera_rgb_frame:
+          Value: true
+        camera_rgb_optical_frame:
+          Value: true
         spr_bfl:
           Value: true
         spr_bfr:
@@ -126,14 +164,24 @@ Visualization Manager:
       Marker Scale: 1
       Name: TF
       Show Arrows: true
-      Show Axes: true
-      Show Names: true
+      Show Axes: false
+      Show Names: false
       Tree:
         base_link:
           Left_wheel:
             {}
           Right_wheel:
             {}
+          body_chassis_link:
+            {}
+          camera_rgb_frame:
+            camera_depth_frame:
+              camera_depth_optical_frame:
+                {}
+            camera_link:
+              {}
+            camera_rgb_optical_frame:
+              {}
           spr_bfl:
             {}
           spr_bfr:
@@ -167,23 +215,22 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Class: rviz/Orbit
-      Distance: 1.89791
+      Class: rviz/FPS
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
-      Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.560398
+      Pitch: 0.380398
+      Position:
+        X: -0.489457
+        Y: -0.000971886
+        Z: 0.195722
       Target Frame: <Fixed Frame>
-      Value: Orbit (rviz)
-      Yaw: 6.14858
+      Value: FPS (rviz)
+      Yaw: 6.28017
     Saved: ~
 Window Geometry:
   Displays:
@@ -201,5 +248,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1200
-  X: 218
-  Y: 186
+  X: 198
+  Y: 166
