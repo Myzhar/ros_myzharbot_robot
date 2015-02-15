@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <launch>
-  <!-- Launch file to view a Husky in the odom frame and control it using interactive markers -->
+  <!-- Launch file to view a MyzharBot in the odom frame and control it using interactive markers -->
   <node pkg="interactive_marker_twist_server" type="marker_server" name="twist_marker_server" output="screen">
 	<remap from = "/twist_marker_server/cmd_vel" to = "myzharbot/command/velocity" /> 
   </node>
+
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find myzharbot_robot_ros)/rviz/robot.rviz" output="screen"/>
 </launch>

@@ -11,6 +11,7 @@ Panels:
         - /RobotModel1/Links1
         - /RobotModel1/Links1/Left_wheel1
         - /RobotModel1/Links1/Right_wheel1
+        - /RobotModel1/Links1/base_link1
         - /TF1/Frames1
         - /TF1/Tree1
       Splitter Ratio: 0.687919
@@ -92,7 +93,7 @@ Visualization Manager:
           Value: true
         base_link:
           Alpha: 1
-          Show Axes: false
+          Show Axes: true
           Show Trail: false
           Value: true
         body_bottom_chassis_link:
@@ -275,10 +276,10 @@ Visualization Manager:
         Z: 2.02656e-06
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.570397
+      Pitch: 0.250397
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 2.43178
+      Yaw: 2.07678
     Saved: ~
 Window Geometry:
   Displays:
