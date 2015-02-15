@@ -1,13 +1,14 @@
 <launch>
   <param name="/info/robot_name" value="myzharbot" />
 
-  <include file="$(find myzharbot_robot_ros)/launch/myzharbot_description.launch"/>
+  <include file="$(find myzharbot_robot_ros)/launch/include/myzharbot_description.launch"/>
+  <include file="$(find myzharbot_robot_ros)/launch/include/rgbd.launch" />
 
   <!-- LOAD bridge robot -->
   <group ns="myzharbot">
       <rosparam command="load" file="$(find myzharbot_robot_ros)/myzharbot_robot.yaml" />      
 
-      <node name="myzharbot" pkg="serial_bridge" type="serial_bridge_node" args="/dev/ttyUSB0">
+      <node name="myzharbot" pkg="serial_bridge" type="serial_bridge_node" args="/dev/ttyUSB0" respawn="true" respawn_delay="20" >
           <remap from = "/myzharbot/joint_states" to = "/joint_states" />
       </node>
 

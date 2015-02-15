@@ -38,6 +38,7 @@
   <!-- base_link -->
   <link name="base_link">
     <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
         <cylinder length=".001" radius="0.05"/>
       </geometry>
