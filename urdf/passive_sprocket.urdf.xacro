@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="myzharbot_passive_sprocket">	
-  
+
   <xacro:macro name="myzharbot_passive_sprocket" params="sprocket_suffix position *joint_pose">
   
     <link name="spr_${sprocket_suffix}">
@@ -24,5 +24,5 @@
     </joint>
 
   </xacro:macro>
-
+  
 </robot>
