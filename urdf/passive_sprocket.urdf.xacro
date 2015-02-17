@@ -19,19 +19,10 @@
       <joint_properties damping="0.0" friction="0.0"/>
       <xacro:insert_block name="joint_pose"/>
       <axis xyz="0 0 1" rpy="0 0 0"/>
+      <!-- Passive sprocket rotate automatically according to the status of the active one -->
       <mimic joint="${position}" multiplier="${active_sprocket_radius/passive_sprocket_radius}" offset="0"/>
     </joint>
-    
-    <!-- <transmission name="sprocket_trans_${sprocket_suffix}">
-    	<type>transmission_interface/SimpleTransmission</type>
-    	<joint name="Sprocket_${sprocket_suffix}">
-      		<hardwareInterface>EffortJointInterface</hardwareInterface>
-    	</joint>
-    	<actuator name="${position}">
-		<hardwareInterface>EffortJointInterface</hardwareInterface>
-      			<mechanicalReduction>${active_sprocket_radius/passive_sprocket_radius}</mechanicalReduction>
-        </actuator>
-    </transmission> -->
+
   </xacro:macro>
 
 </robot>
