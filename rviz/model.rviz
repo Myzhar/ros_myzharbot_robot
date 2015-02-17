@@ -9,9 +9,6 @@ Panels:
         - /Grid1
         - /RobotModel1
         - /RobotModel1/Links1
-        - /RobotModel1/Links1/Left_wheel1
-        - /RobotModel1/Links1/Right_wheel1
-        - /RobotModel1/Links1/base_link1
         - /TF1/Frames1
         - /TF1/Tree1
       Splitter Ratio: 0.687919
@@ -134,22 +131,22 @@ Visualization Manager:
           Value: true
         spr_bfl:
           Alpha: 1
-          Show Axes: false
+          Show Axes: true
           Show Trail: false
           Value: true
         spr_bfr:
           Alpha: 1
-          Show Axes: false
+          Show Axes: true
           Show Trail: false
           Value: true
         spr_brl:
           Alpha: 1
-          Show Axes: false
+          Show Axes: true
           Show Trail: false
           Value: true
         spr_brr:
           Alpha: 1
-          Show Axes: false
+          Show Axes: true
           Show Trail: false
           Value: true
       Name: RobotModel
