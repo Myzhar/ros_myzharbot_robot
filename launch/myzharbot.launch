@@ -1,8 +1,8 @@
 <launch>
   <param name="/info/robot_name" value="myzharbot" />
 
-  <include file="$(find myzharbot_robot_ros)/launch/include/myzharbot_description.launch" ns="myzharbot" />
-  <include file="$(find myzharbot_robot_ros)/launch/include/rgbd.launch" ns="myzharbot" />
+  <include file="$(find myzharbot_robot_ros)/launch/include/myzharbot_description.launch" />
+  <include file="$(find myzharbot_robot_ros)/launch/include/rgbd.launch" />
 
   <!-- LOAD bridge robot -->
   <group ns="myzharbot">

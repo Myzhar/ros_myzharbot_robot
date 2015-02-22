@@ -5,12 +5,11 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
+        - /RobotModel1
         - /RobotModel1/Links1
         - /RobotModel1/Links1/base_link1
-        - /TF1
+        - /RobotModel1/Links1/spr_bfl1
         - /TF1/Frames1
-        - /PointCloud21
-        - /LaserScan1
       Splitter Ratio: 0.63
     Tree Height: 374
   - Class: rviz/Selection
@@ -58,7 +57,7 @@ Visualization Manager:
       Color: 255; 25; 0
       Enabled: true
       Keep: 100
-      Length: 0.3
+      Length: 0
       Name: Odometry
       Position Tolerance: 0.1
       Topic: /myzharbot/odometry
@@ -141,22 +140,22 @@ Visualization Manager:
           Show Trail: false
         spr_bfl:
           Alpha: 1
-          Show Axes: false
+          Show Axes: true
           Show Trail: false
           Value: true
         spr_bfr:
           Alpha: 1
-          Show Axes: false
+          Show Axes: true
           Show Trail: false
           Value: true
         spr_brl:
           Alpha: 1
-          Show Axes: false
+          Show Axes: true
           Show Trail: false
           Value: true
         spr_brr:
           Alpha: 1
-          Show Axes: false
+          Show Axes: true
           Show Trail: false
           Value: true
       Name: RobotModel
@@ -248,7 +247,7 @@ Visualization Manager:
               {}
             spr_brr:
               {}
-      Update Interval: 1
+      Update Interval: 0.1
       Value: true
     - Class: rviz/InteractiveMarkers
       Enable Transparency: true
@@ -271,7 +270,7 @@ Visualization Manager:
       Color: 255; 255; 255
       Color Transformer: RGB8
       Decay Time: 0
-      Enabled: false
+      Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Max Intensity: -1.70141e+38
@@ -287,12 +286,12 @@ Visualization Manager:
       Topic: /rgbd_camera/depth_registered/points
       Use Fixed Frame: true
       Use rainbow: true
-      Value: false
+      Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 0.14887
-        Min Value: -0.839859
+        Max Value: -0.183446
+        Min Value: -0.198062
         Value: true
       Axis: X
       Channel Name: intensity
@@ -372,22 +371,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.93468
+      Distance: 8.16509
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 1.0363
-        Y: -0.0216127
-        Z: 0.0368889
+        X: -3.7743
+        Y: 2.86881
+        Z: 0.436346
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.285399
+      Pitch: -0.0446007
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.97405
+      Yaw: 5.32586
     Saved: ~
 Window Geometry:
   Camera:
