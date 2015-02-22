@@ -1,7 +1,3 @@
-body_chassis_height: 0.0775
-sprocket_x_offset: 0.135
-sprocket_y_offset: 0.17
-sprocket_z_offset: 0.047625
 frequency:
   Odometry: 10
   PID: {Left: 1, Right: 1}
@@ -9,13 +5,22 @@ frequency:
 info: {baud_rate: 115200, type_board: Motor Control}
 joint_states:
   back_emf: {Left: 1.0, Right: 1.0}
+<<<<<<< HEAD
   constraint: {Left: 23000.0, Right: 23000.0}
+=======
+  constraint: {Left: 23000, Right: 23000}
+>>>>>>> features/xacro
   Left: {k_vel: 34278152.248661, k_ang: 0.000214, versus: 1, default_enable: 0}
   Right: {k_vel: 34278152.248661, k_ang: 0.000214, versus: -1, default_enable: 0}
 odo_mis_step: 0.0001
 pid:
+<<<<<<< HEAD
   Left: {P: 0.1, I: 0.2, D: 0.45}
   Right: {P: 0.1, I: 0.2, D: 0.45}
+=======
+  Left: {P: 0.05, I: 0.2, D: 0.45}
+  Right: {P: 0.05, I: 0.2, D: 0.45}
+>>>>>>> features/xacro
 priority:
   Odometry: 10
   PID: {Left: 1, Right: 1}
@@ -26,4 +31,5 @@ structure:
   wheelbase: 0.34
 tf: {base_link: base_link, joint_states: joint_states, odometry: odometry}
 time: {k_time: 3.051850947599719e-05, step: 32767.0, tm_mill: 1.0}
-timer: {emergency: 1.0, alive: 0.1, rate: 15.0, stop: 2.0}
+emergency: {timeout: 0.5, slope_time: 1.0, bridge_off: 1.0}
+timer: {alive: 0.1, rate: 15.0}

@@ -1,20 +1,18 @@
 <launch>
   <param name="/info/robot_name" value="myzharbot" />
 
-  <param name="robot_description" textfile="$(find myzharbot_robot_ros)/myzharbot_robot.urdf" />
-  
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
-  
+  <include file="$(find myzharbot_robot_ros)/launch/include/myzharbot_description.launch" ns="myzharbot" />
+  <include file="$(find myzharbot_robot_ros)/launch/include/rgbd.launch" ns="myzharbot" />
+
   <!-- LOAD bridge robot -->
   <group ns="myzharbot">
-      <rosparam command="load" file="$(find myzharbot_robot_ros)/myzharbot_robot.yaml" />
+      <rosparam command="load" file="$(find myzharbot_robot_ros)/myzharbot_robot.yaml" />      
 
-      <node name="myzharbot" pkg="serial_bridge" type="serial_bridge_node" args="/dev/ttyUSB0">
+      <node name="myzharbot" pkg="serial_bridge" type="serial_bridge_node" args="/dev/ttyUSB0" output="screen" respawn="true" respawn_delay="20" >
           <remap from = "/myzharbot/joint_states" to = "/joint_states" />
       </node>
 
-      <node name="myzharbot_tf" pkg="myzharbot_robot_ros" type="myzharbot_tf_node">
-      </node>
+      <!-- <node name="myzharbot_tf" pkg="myzharbot_robot_ros" type="myzharbot_tf_node.cpp" /> -->
   </group>
  
 </launch>
