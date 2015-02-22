@@ -5,22 +5,13 @@ frequency:
 info: {baud_rate: 115200, type_board: Motor Control}
 joint_states:
   back_emf: {Left: 1.0, Right: 1.0}
-<<<<<<< HEAD
-  constraint: {Left: 23000.0, Right: 23000.0}
-=======
   constraint: {Left: 23000, Right: 23000}
->>>>>>> features/xacro
   Left: {k_vel: 34278152.248661, k_ang: 0.000214, versus: 1, default_enable: 0}
   Right: {k_vel: 34278152.248661, k_ang: 0.000214, versus: -1, default_enable: 0}
 odo_mis_step: 0.0001
 pid:
-<<<<<<< HEAD
-  Left: {P: 0.1, I: 0.2, D: 0.45}
-  Right: {P: 0.1, I: 0.2, D: 0.45}
-=======
   Left: {P: 0.05, I: 0.2, D: 0.45}
   Right: {P: 0.05, I: 0.2, D: 0.45}
->>>>>>> features/xacro
 priority:
   Odometry: 10
   PID: {Left: 1, Right: 1}
