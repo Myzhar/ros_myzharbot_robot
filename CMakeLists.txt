@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(myzharbot_robot_ros)
+project(ros_myzharbot_robot)
 
 set(ROS_BUILD_TYPE Debug)
 set(CMAKE_BUILD_TYPE Debug)
