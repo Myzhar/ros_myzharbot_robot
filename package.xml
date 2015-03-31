@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>myzharbot_robot_ros</name>
+  <name>ros_myzharbot_robot</name>
   <version>0.0.1</version>
   <description>
 	This is the configuration package for the robot MyzharBot.
