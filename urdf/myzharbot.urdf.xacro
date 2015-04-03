@@ -2,11 +2,11 @@
 <robot name="myzharbot_robot" xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!-- Included URDF/XACRO Files -->
-  <xacro:include filename="$(find myzharbot_robot_ros)/urdf/materials.urdf" />
-  <xacro:include filename="$(find myzharbot_robot_ros)/urdf/passive_sprocket.urdf.xacro" />
-  <xacro:include filename="$(find myzharbot_robot_ros)/urdf/active_sprocket.urdf.xacro" />
-  <xacro:include filename="$(find myzharbot_robot_ros)/urdf/motor.urdf.xacro" />
-  <xacro:include filename="$(find myzharbot_robot_ros)/urdf/sensors/asus_xtion_pro.urdf.xacro"/>
+  <xacro:include filename="$(find ros_myzharbot_robot)/urdf/materials.urdf" />
+  <xacro:include filename="$(find ros_myzharbot_robot)/urdf/passive_sprocket.urdf.xacro" />
+  <xacro:include filename="$(find ros_myzharbot_robot)/urdf/active_sprocket.urdf.xacro" />
+  <xacro:include filename="$(find ros_myzharbot_robot)/urdf/motor.urdf.xacro" />
+  <xacro:include filename="$(find ros_myzharbot_robot)/urdf/sensors/asus_xtion_pro.urdf.xacro"/>
   <!-- Included URDF/XACRO Files -->
 
   <!-- Global properties -->
