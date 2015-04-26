@@ -2,7 +2,7 @@
 <launch>
   <!-- Launch file to view a MyzharBot in the odom frame and control it using interactive markers -->
   <node pkg="interactive_marker_twist_server" type="marker_server" name="twist_marker_server" output="screen">
-	<remap from = "/twist_marker_server/cmd_vel" to = "myzharbot/command/velocity" /> 
+	<remap from = "/twist_marker_server/cmd_vel" to = "myzharbot/cmd_vel" /> 
   </node>
 
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find ros_myzharbot_robot)/rviz/robot.rviz" output="screen"/>

@@ -5,11 +5,11 @@
 
 <launch>
   <!-- Standalone launcher to visualize the robot model. -->
-  <include file="$(find myzharbot_robot_ros)/launch/include/myzharbot_description.launch"/>
+  <include file="$(find ros_myzharbot_robot)/launch/include/myzharbot_description.launch"/>
   
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" output="screen">
     <param name="use_gui" value="true" />
   </node>
 
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find myzharbot_robot_ros)/rviz/model.rviz" output="screen" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find ros_myzharbot_robot)/rviz/model.rviz" output="screen" />
 </launch>

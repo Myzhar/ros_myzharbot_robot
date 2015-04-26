@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+
 <package>
   <name>ros_myzharbot_robot</name>
   <version>0.0.1</version>
@@ -19,9 +20,15 @@
   <author email="mauro.soligo@katodo.com">Mauro Soligo</author>
   <author email="myzhar@robot-home.it">Walter 'Myzhar' Lucetti</author>
 
-  <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>tf</build_depend>
   <run_depend>tf</run_depend>
-  <run_depend>serial_bridge</run_depend>
+  <run_depend>ros_serial_bridge</run_depend>
+  <run_depend>ros_robot_teleoperation</run_depend>
+  <run_depend>openni2_launch</run_depend>
+  <run_depend>openni2_camera</run_depend>
+  <run_depend>depthimage_to_laserscan</run_depend>
+  <run_depend>ros_inemo_m1_imu</run_depend>
+
+
+
 
 </package>

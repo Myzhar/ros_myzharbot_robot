@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<launch>
+  <!-- LOAD bridge robot -->
+  <node name="keybrd_teleop_key_node" pkg="ros_robot_teleoperation" type="keybrd_teleop_key_node" output="screen" >
+	<remap from="cmd_vel" to="myzharbot/cmd_vel" />
+  </node>
+</launch>
