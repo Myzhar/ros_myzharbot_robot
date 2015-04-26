@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<launch>
+  <!-- LOAD bridge robot -->
+  <node name="robot_wandering_node" pkg="ros_robot_wandering_demo" type="robot_wandering_node" output="screen" >
+	<remap from="cmd_vel" to="myzharbot/cmd_vel" />
+        <remap from="scan" to="myzharbot/scan" />
+  </node>
+</launch>

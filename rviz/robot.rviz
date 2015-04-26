@@ -10,7 +10,6 @@ Panels:
         - /TF1/Frames1
         - /TF1/Tree1
         - /LaserScan1/Autocompute Value Bounds1
-        - /Camera1
         - /Image1
         - /WrenchStamped1
       Splitter Ratio: 0.420259
@@ -63,7 +62,7 @@ Visualization Manager:
       Length: 0
       Name: Odometry
       Position Tolerance: 0.1
-      Topic: /odom
+      Topic: /myzharbot/odom
       Value: true
     - Alpha: 1
       Class: rviz/RobotModel
@@ -168,19 +167,90 @@ Visualization Manager:
       Value: true
       Visual Enabled: true
     - Class: rviz/TF
-      Enabled: false
+      Enabled: true
       Frame Timeout: 15
       Frames:
         All Enabled: true
+        Left_motor_link:
+          Value: true
+        Left_wheel:
+          Value: true
+        Right_motor_link:
+          Value: true
+        Right_wheel:
+          Value: true
+        asus_support_link:
+          Value: true
+        base_link:
+          Value: true
+        body_bottom_chassis_link:
+          Value: true
+        body_top_chassis_link:
+          Value: true
+        jetson_chassis_link:
+          Value: true
+        odometry:
+          Value: true
+        rgbd_camera_depth_frame:
+          Value: true
+        rgbd_camera_depth_optical_frame:
+          Value: true
+        rgbd_camera_link:
+          Value: true
+        rgbd_camera_rgb_frame:
+          Value: true
+        rgbd_camera_rgb_optical_frame:
+          Value: true
+        spr_bfl:
+          Value: true
+        spr_bfr:
+          Value: true
+        spr_brl:
+          Value: true
+        spr_brr:
+          Value: true
       Marker Scale: 0.3
       Name: TF
       Show Arrows: true
       Show Axes: false
       Show Names: false
       Tree:
-        {}
+        odometry:
+          base_link:
+            Left_motor_link:
+              {}
+            Left_wheel:
+              {}
+            Right_motor_link:
+              {}
+            Right_wheel:
+              {}
+            asus_support_link:
+              {}
+            body_bottom_chassis_link:
+              {}
+            body_top_chassis_link:
+              {}
+            jetson_chassis_link:
+              {}
+            rgbd_camera_rgb_frame:
+              rgbd_camera_depth_frame:
+                rgbd_camera_depth_optical_frame:
+                  {}
+              rgbd_camera_link:
+                {}
+              rgbd_camera_rgb_optical_frame:
+                {}
+            spr_bfl:
+              {}
+            spr_bfr:
+              {}
+            spr_brl:
+              {}
+            spr_brr:
+              {}
       Update Interval: 0.1
-      Value: false
+      Value: true
     - Class: rviz/InteractiveMarkers
       Enable Transparency: true
       Enabled: false
@@ -315,7 +385,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.50701
+      Distance: 11.3136
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
@@ -327,10 +397,10 @@ Visualization Manager:
         Z: 0.331
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.214796
+      Pitch: 0.294796
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.51317
+      Yaw: 3.39817
     Saved: ~
 Window Geometry:
   Camera:

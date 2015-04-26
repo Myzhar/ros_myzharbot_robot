@@ -10,7 +10,7 @@
 
       <rosparam command="load" file="$(find ros_myzharbot_robot)/myzharbot_robot.yaml" />      
 
-      <node name="myzharbot" pkg="ros_serial_bridge" type="serial_bridge_node" args="/dev/ttyUSB0" output="screen"  respawn="true" respawn_delay="20" />
+      <node name="robocontroller_bridge" pkg="ros_serial_bridge" type="serial_bridge_node" args="/dev/ttyUSB0" output="screen"  respawn="true" respawn_delay="20" />
 
       <node name="inemo_m1_node" pkg="ros_inemo_m1_imu" type="inemo_m1_node" output="screen" respawn="true" respawn_delay="20" />
   </group>
