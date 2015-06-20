@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+
+<launch>
+
+  <include file="$(find myzharbot_demo)/launch/include/bringup.launch">
+    <arg name="rgbd_enabled" value="true"/>
+  </include>
+  
+  <node name="wandering" pkg="robot_wandering_demo_ros" type="robot_wandering_node" />
+
+ 
+</launch>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<!-- <launch>
+  <node pkg="razor_imu_9dof" type="imu_node.py" name="imu_node" output="screen">
+    <rosparam file="$(find dude_control)/config/razor.yaml" command="load"/>
+    <remap from="imu" to="imu/data"/>
+  </node>
+</launch> -->
+
+<launch>
+	<node name="inemo_m1_node" pkg="ros_inemo_m1_imu" type="inemo_m1_node" output="screen" respawn="true" respawn_delay="20" >
+		<remap from="imu_data" to="imu/data"/>
+	</node>
+</launch>

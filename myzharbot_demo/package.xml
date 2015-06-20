@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package>
+  <name>myzharbot_demo</name>
+  <version>0.1.0</version>
+  <description>
+	This is a list of all demo avaiable for robot
+  </description>
+
+  
+  <maintainer email="myzharbot@robot-home.it">Walter Lucetti</maintainer>
+
+  <license>BSD</license>
+
+  <url type="repository">https://github.com/Myzhar/ros_myzharbot_robot.git</url>
+
+  <author email="myzharbot@robot-home.it">Walter Lucetti</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roslaunch</build_depend>
+
+  <run_depend>myzharbot_description</run_depend>
+  <run_depend>orbus_interface</run_depend>
+
+</package>
